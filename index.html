@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>植物增强计划 PEP - 预览版发布页</title>
+<style>
+  :root{
+    --leaf:#2e7d32; --leaf-d:#1b5e20; --sun:#fdd835; --sun-d:#f9a825;
+    --bg:#0e2a12; --panel:#163a1d; --text:#eef6ee; --muted:#a8c9ac;
+    --card:#1e4d27; --line:#2f6b38;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    background:radial-gradient(1200px 700px at 50% -10%, #1d5c26 0%, var(--bg) 60%);
+    color:var(--text);
+    font-family:"Segoe UI","Microsoft YaHei",system-ui,sans-serif;
+    min-height:100vh;
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:56px 20px 80px}
+  /* 顶部标题 */
+  .hero{text-align:center;margin-bottom:44px}
+  .hero h1{
+    font-size:42px;letter-spacing:2px;
+    color:#fff;
+    text-shadow:0 2px 0 var(--leaf-d),0 4px 18px rgba(0,0,0,.45);
+  }
+  .hero .sub{margin-top:10px;color:var(--muted);font-size:15px}
+  .badge{
+    display:inline-block;margin-top:14px;padding:6px 16px;border-radius:999px;
+    background:var(--sun);color:#3a2a00;font-weight:700;font-size:14px;
+    box-shadow:0 3px 10px rgba(0,0,0,.3);
+  }
+  /* 主页最中间：四个入口 */
+  .nav-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-bottom:14px}
+  .nav-card{
+    display:flex;align-items:center;justify-content:center;gap:10px;
+    padding:30px 18px;border-radius:16px;cursor:pointer;
+    background:linear-gradient(160deg,var(--card),var(--leaf-d));
+    border:1px solid var(--line);
+    font-size:22px;font-weight:700;color:#fff;
+    text-decoration:none;user-select:none;
+    box-shadow:0 6px 16px rgba(0,0,0,.25);
+    transition:transform .12s ease, box-shadow .12s ease;
+  }
+  .nav-card:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(0,0,0,.35)}
+  .nav-card:active{transform:translateY(0)}
+  .nav-card .ico{font-size:26px}
+  .full{grid-column:1/-1}
+  /* 各区块 */
+  section{
+    margin-top:56px;background:rgba(255,255,255,.04);
+    border:1px solid var(--line);border-radius:16px;padding:26px 26px 30px;
+  }
+  section h2{font-size:24px;margin-bottom:16px;color:var(--sun)}
+  section p{line-height:1.9;color:var(--text)}
+  .muted{color:var(--muted);font-size:14px;margin-top:8px}
+  .card-list{display:grid;gap:16px}
+  .dl-card{
+    display:flex;align-items:center;gap:16px;
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:18px 20px;
+  }
+  .dl-card .info{flex:1}
+  .dl-card .info .name{font-size:17px;font-weight:700}
+  .dl-card .info .desc{margin-top:4px;color:var(--muted);font-size:13px}
+  .btn{
+    display:inline-block;padding:10px 22px;border-radius:10px;cursor:pointer;
+    background:var(--sun);color:#3a2a00;font-weight:700;font-size:15px;
+    text-decoration:none;border:0;
+    transition:filter .12s ease;
+  }
+  .btn:hover{filter:brightness(1.08)}
+  .btn.ghost{background:transparent;color:var(--sun);border:1px solid var(--sun);margin-left:8px}
+  ol.steps{margin:10px 0 0 20px;line-height:2}
+  footer{text-align:center;margin-top:64px;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <h1>植物增强计划 PEP</h1>
+    <div class="sub">Plants Enhancement Program · PvZ2 Gardendless 模组</div>
+    <div class="badge">预览版 v1.0</div>
+  </div>
+
+  <!-- 主页最中间：介绍 / 下载 / 官网链接 / 反馈 -->
+  <div class="nav-grid">
+    <a class="nav-card" href="#intro"><span class="ico">📖</span>介绍</a>
+    <a class="nav-card" href="#download"><span class="ico">⬇️</span>下载</a>
+    <a class="nav-card" href="https://pvzge.com/" target="_blank" rel="noopener"><span class="ico">🌐</span>官网链接</a>
+    <a class="nav-card" href="https://space.bilibili.com/518811104" target="_blank" rel="noopener"><span class="ico">💬</span>反馈</a>
+  </div>
+
+  <!-- 介绍 -->
+  <section id="intro">
+    <h2>📖 介绍</h2>
+    <p>介绍文本待补充……</p>
+    <p class="muted">（作者会在后续版本补充详细介绍内容）</p>
+  </section>
+
+  <!-- 下载 -->
+  <section id="download">
+    <h2>⬇️ 下载</h2>
+    <p>点击按钮即可通过浏览器直接下载压缩包；解压后按下方步骤安装。</p>
+    <div class="card-list" style="margin-top:18px">
+      <div class="dl-card">
+        <div class="info">
+          <div class="name">植物增强计划 PEP（预览版）</div>
+          <div class="desc">主功能模组：PEP-Preview-v1.0.zip</div>
+        </div>
+        <a class="btn" href="downloads/PEP-Preview-v1.0.zip" download>下载</a>
+      </div>
+      <div class="dl-card">
+        <div class="info">
+          <div class="name">血量与大招计数显示（预览版）</div>
+          <div class="desc">配套显示模组：pep-full-display-Preview-v1.0.zip</div>
+        </div>
+        <a class="btn" href="downloads/pep-full-display-Preview-v1.0.zip" download>下载</a>
+      </div>
+    </div>
+    <ol class="steps muted">
+      <li>下载并解压压缩包，得到模组文件夹；</li>
+      <li>将模组文件夹放入游戏的 <code>gp-next/packs/</code> 目录；</li>
+      <li>启动游戏，在 GP-Next 侧边栏「模组」页确认模组已激活。</li>
+    </ol>
+  </section>
+
+  <footer>植物增强计划 PEP · 由 十六夜咲夜 制作 · PvZ2 Gardendless 模组</footer>
+</div>
+</body>
+</html>
